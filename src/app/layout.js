@@ -15,7 +15,11 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata = {
+<<<<<<< HEAD
   title: "SURGICAL WORLD",
+=======
+  title: "Surgical World",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   description: "Trusted Medical Equipment Store",
   icons: {
     icon: "/surgicallogo3.ico",

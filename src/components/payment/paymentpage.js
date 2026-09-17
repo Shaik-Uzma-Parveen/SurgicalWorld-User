@@ -130,7 +130,11 @@ export default function PaymentPageContent() {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: razorpayConfig.amount,
         currency: razorpayConfig.currency || "INR",
+<<<<<<< HEAD
         name: "SURGICAL WORLD",
+=======
+        name: "Surgical World",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
         description: `Order #${order.order_id.slice(0, 8)}`,
         order_id: razorpayConfig.razorpay_order_id,
 

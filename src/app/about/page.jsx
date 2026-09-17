@@ -91,7 +91,11 @@ export default function AboutPage() {
             variant="h2"
             className="text-white"
           >
+<<<<<<< HEAD
             About SURGICAL WORLD
+=======
+            About Surgical World
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
           </Text>
 
           <Text className="mt-3 text-white/90">
@@ -133,7 +137,11 @@ export default function AboutPage() {
               </Text>
 
               <Text className="mt-5">
+<<<<<<< HEAD
                 SURGICAL WORLD was founded in
+=======
+                Surgical World was founded in
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
                 1999 with a single mission:
                 delivering quality surgical and
                 medical equipment across Andhra
@@ -340,7 +348,11 @@ export default function AboutPage() {
 
           <div className="overflow-hidden rounded-2xl border bg-white">
             <iframe
+<<<<<<< HEAD
               title="SURGICAL WORLD"
+=======
+              title="Surgical World"
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
               src="https://maps.google.com/maps?q=Old%20Club%20Rd%20Guntur&t=&z=15&ie=UTF8&iwloc=&output=embed"
               className="h-[400px] w-full"
               loading="lazy"

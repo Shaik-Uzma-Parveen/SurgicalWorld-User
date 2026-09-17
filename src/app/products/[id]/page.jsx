@@ -191,6 +191,7 @@ export default function Page() {
 
           {/* ================= DETAILS ================= */}
           <div>
+<<<<<<< HEAD
             {(() => {
               const categoryNames = (
                 product?.categories?.length
@@ -214,6 +215,13 @@ export default function Page() {
                 </div>
               );
             })()}
+=======
+            {isValid(product?.category?.name) && (
+              <p className="text-sm text-green-600 font-medium">
+                {product.category.name}
+              </p>
+            )}
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 
             <Text variant="h2">{product.name}</Text>
 

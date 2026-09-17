@@ -25,14 +25,23 @@ import { Container, AuthModal } from "@/components";
 
 import useCartCount from "@/hooks/useCartCountHeader";
 import useWishlistCount from "@/hooks/usewishlistcount";
+<<<<<<< HEAD
 import useCategories from "@/hooks/useCategories";
+=======
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 import { setUser, clearUser } from "@/redux/userSlice";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
+<<<<<<< HEAD
   { href: "/about", label: "Why Us" },
   { href: "/categories", label: "Categories" },
   { href: "/contact", label: "Contact Us" },
+=======
+  { href: "/products", label: "Products" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 ];
 
 export default function Header() {
@@ -45,7 +54,10 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+<<<<<<< HEAD
   const [categoriesOpen, setCategoriesOpen] = useState(false);
+=======
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   const [search, setSearch] = useState("");
   const [mobileSearch, setMobileSearch] = useState("");
 
@@ -55,7 +67,10 @@ export default function Header() {
   const user = useSelector((state) => state.user.user);
   const { cartCount } = useCartCount();
   const { wishlistCount } = useWishlistCount();
+<<<<<<< HEAD
   const { categories: headerCategories, loading: categoriesLoading } = useCategories();
+=======
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 
   useEffect(() => {
     setMounted(true);
@@ -144,7 +159,11 @@ export default function Header() {
  <Link href="/" className="flex h-full shrink-0 items-center justify-start -ml-2 md:ml-0">
   <Image
     src="/surgicalimg4.png"
+<<<<<<< HEAD
     alt="SURGICAL WORLD"
+=======
+    alt="Surgical World"
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
     width={400}
     height={240}
     priority
@@ -313,6 +332,7 @@ export default function Header() {
           <nav className="flex h-11 items-center gap-8">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href;
+<<<<<<< HEAD
 
               if (link.href === "/categories") {
                 return (
@@ -350,6 +370,8 @@ export default function Header() {
                 );
               }
 
+=======
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
               return (
                 <Link
                   key={link.href}
@@ -490,6 +512,7 @@ export default function Header() {
   );
 }
 
+<<<<<<< HEAD
 function CategoriesDropdown({ open, categories, loading, onClose }) {
   const router = useRouter();
 
@@ -553,6 +576,8 @@ function CategoriesDropdown({ open, categories, loading, onClose }) {
   );
 }
 
+=======
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 function ProfileDropdown({ user, onLogout, alignRight }) {
   return (
     <div

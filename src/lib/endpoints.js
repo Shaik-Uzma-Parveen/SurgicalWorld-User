@@ -1,7 +1,10 @@
 export const API_ENDPOINTS = {
   REGISTER: "/api/v1/auth/register",
   LOGIN: "/api/v1/auth/login",
+<<<<<<< HEAD
   GOOGLE_LOGIN: "/api/v1/auth/google",
+=======
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   CATEGORIES: "/api/v1/store/categories",
   PRODUCTS: "/api/v1/store/products",
   PRODUCT_DETAILS: (id) => `/api/v1/store/products/${id}`,

@@ -28,7 +28,11 @@ export default function Header() {
               <Plus size={22} />
             </button>
             <h1 className="text-xl font-bold text-blue-600 lg:text-3xl">
+<<<<<<< HEAD
               SURGICAL WORLD
+=======
+              Surgical World
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
             </h1>
           </div>
 

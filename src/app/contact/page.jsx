@@ -128,56 +128,88 @@ ${formData.message}
     city: "Guntur",
     address:
       "Old Club Rd, Opp. Karumuri Hospitals, Gunturvari Thota, Kothapeta, Andhra Pradesh 522001",
+<<<<<<< HEAD
     map: "https://maps.app.goo.gl/iEdbdRRpacaRmaCz8",
+=======
+    map: "https://maps.app.goo.gl/sfbgvP1A6bQHvWFa8?g_st=aw",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   },
   {
     id: 2,
     branch: "Ponnur Branch",
     city: "Ponnur",
     address: "Ponnur, Andhra Pradesh",
+<<<<<<< HEAD
     map: "https://maps.app.goo.gl/e3XEWELRcyBWGuBy8",
+=======
+    map: "#",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   },
   {
     id: 3,
     branch: "Chirala Branch",
     city: "Chirala",
     address: "Chirala, Andhra Pradesh",
+<<<<<<< HEAD
     map: "https://maps.app.goo.gl/8kzq8wfrnkkYUbjE6",
+=======
+    map: "#",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   },
   {
     id: 4,
     branch: "Ongole Branch",
     city: "Ongole",
     address: "Ongole, Andhra Pradesh",
+<<<<<<< HEAD
     map: "https://maps.app.goo.gl/9wcvJqcPDT1dgthM7",
+=======
+    map: "#",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   },
   {
     id: 5,
     branch: "Vijayawada Branch",
     city: "Vijayawada",
     address: "Vijayawada, Andhra Pradesh",
+<<<<<<< HEAD
     map: "https://maps.app.goo.gl/fqsdaNZ6SXz21YxH8",
+=======
+    map: "#",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   },
   {
     id: 6,
     branch: "Eluru Branch",
     city: "Eluru",
     address: "Eluru, Andhra Pradesh",
+<<<<<<< HEAD
     map: "https://maps.app.goo.gl/bFfZzaKd9KWtA7K89",
+=======
+    map: "#",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   },
   {
     id: 7,
     branch: "Kakinada Branch",
     city: "Kakinada",
     address: "Kakinada, Andhra Pradesh",
+<<<<<<< HEAD
     map: "https://maps.app.goo.gl/ikKyQommvwWzPzeHA",
+=======
+    map: "#",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   },
   {
     id: 8,
     branch: "Tirupati Branch",
     city: "Tirupati",
     address: "Tirupati, Andhra Pradesh",
+<<<<<<< HEAD
     map: "https://maps.app.goo.gl/tc7EgETxwXp1BPyg9",
+=======
+    map: "#",
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   },
 ];
 
@@ -426,6 +458,7 @@ ${formData.message}
             key={outlet.city}
             className="rounded-lg border p-3"
           >
+<<<<<<< HEAD
             <a
               href={outlet.map}
               target="_blank"
@@ -434,6 +467,11 @@ ${formData.message}
             >
               {outlet.city}
             </a>
+=======
+            <p className="font-semibold text-[var(--color-text-primary)]">
+              {outlet.city}
+            </p>
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
             <p className="mt-1 text-sm leading-6 text-gray-600">
               {outlet.address}
             </p>
@@ -447,7 +485,11 @@ ${formData.message}
             {/* Google Map */}
             <div className="overflow-hidden rounded-2xl border bg-white shadow-sm">
               <iframe
+<<<<<<< HEAD
                 title="SURGICAL WORLD Location"
+=======
+                title="Surgical World Location"
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
                 src="https://maps.google.com/maps?q=Old%20Club%20Rd%20Guntur&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="320"

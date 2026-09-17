@@ -1,17 +1,53 @@
 "use client";
 
+<<<<<<< HEAD
 import { useEffect, useRef } from "react";
+=======
+import { useRef } from "react";
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 import Container from "@/components/ui/Container";
 import Text from "@/components/ui/Text";
 import useCategories from "@/hooks/useCategories";
 import { useRouter } from "next/navigation";
+<<<<<<< HEAD
 
 const AUTO_SCROLL_SPEED = 80;
 const AUTO_SCROLL_CLONES = 3;
+=======
+import {
+  Stethoscope,
+  HeartPulse,
+  Pill,
+  Thermometer,
+  Accessibility,
+  Bed,
+  ShieldPlus,
+  Syringe,
+  Microscope,
+  Scissors,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+
+const categoryIcons = {
+  Diagnostics: Microscope,
+  Nebulizers: HeartPulse,
+  "BP Monitors": Stethoscope,
+  Aids: Accessibility,
+  "Gloves & PPE": ShieldPlus,
+  Wheelchairs: Accessibility,
+  Surgical: Syringe,
+  "OT Equipment": Scissors,
+  Thermometers: Thermometer,
+  Medicines: Pill,
+  Furniture: Bed,
+};
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 
 export default function CategorySection() {
   const router = useRouter();
   const scrollRef = useRef(null);
+<<<<<<< HEAD
   const pausedRef = useRef(false);
   const lastTimeRef = useRef(null);
   const rafRef = useRef(null);
@@ -70,6 +106,18 @@ export default function CategorySection() {
   const handleCategoryClick = (item) => {
     sessionStorage.setItem("selectedCategory", item.id);
     router.push("/products");
+=======
+
+  const { categories, loading, error } = useCategories();
+
+  const scrollCategories = (direction) => {
+    if (!scrollRef.current) return;
+
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -350 : 350,
+      behavior: "smooth",
+    });
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
   };
 
   if (loading) {
@@ -112,6 +160,7 @@ export default function CategorySection() {
         </div>
 
         <div className="relative">
+<<<<<<< HEAD
           <div
             ref={scrollRef}
             onMouseEnter={() => {
@@ -120,6 +169,52 @@ export default function CategorySection() {
             onMouseLeave={() => {
               pausedRef.current = false;
             }}
+=======
+          {/* Left Arrow (Desktop Only) */}
+          <button
+            onClick={() => scrollCategories("left")}
+            className="
+              absolute
+              left-0
+              top-1/2
+              z-10
+              hidden
+              -translate-y-1/2
+              rounded-full
+              bg-white
+              p-3
+              shadow-lg
+              hover:bg-gray-100
+              lg:flex
+            "
+          >
+            <ChevronLeft size={22} />
+          </button>
+
+          {/* Right Arrow (Desktop Only) */}
+          <button
+            onClick={() => scrollCategories("right")}
+            className="
+              absolute
+              right-0
+              top-1/2
+              z-10
+              hidden
+              -translate-y-1/2
+              rounded-full
+              bg-white
+              p-3
+              shadow-lg
+              hover:bg-gray-100
+              lg:flex
+            "
+          >
+            <ChevronRight size={22} />
+          </button>
+
+          <div
+            ref={scrollRef}
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
             className="
               flex
               gap-4
@@ -130,6 +225,7 @@ export default function CategorySection() {
               lg:px-14
             "
           >
+<<<<<<< HEAD
             {Array.from({ length: AUTO_SCROLL_CLONES })
               .flatMap((_, copyIndex) =>
                 categories.map((item) => {
@@ -205,6 +301,87 @@ export default function CategorySection() {
                   );
                 })
               )}
+=======
+            {categories.map((item) => {
+              const Icon =
+                categoryIcons[item.name] ||
+                Microscope;
+
+              return (
+                <div
+                  key={item.id}
+                  onClick={() => {
+                    sessionStorage.setItem(
+                      "selectedCategory",
+                      item.id
+                    );
+
+                    router.push("/products");
+                  }}
+                  className="
+                    min-w-[130px]
+                    sm:min-w-[150px]
+                    md:min-w-[170px]
+                    lg:min-w-[180px]
+                    flex-shrink-0
+                    bg-white
+                    border
+                    border-gray-200
+                    rounded-2xl
+                    p-4
+                    flex
+                    flex-col
+                    items-center
+                    justify-center
+                    gap-3
+                    cursor-pointer
+                    hover:border-[var(--color-text-primary)]
+                    hover:shadow-lg
+                    transition-all
+                    duration-300
+                  "
+                >
+                  <div
+                    className="
+                      h-14
+                      w-14
+                      rounded-full
+                      flex
+                      items-center
+                      justify-center
+                      bg-blue-50
+                    "
+                  >
+                    <div
+                      className="
+    h-14
+    w-14
+    rounded-full
+    flex
+    items-center
+    justify-center
+    bg-blue-50
+  "
+                    >
+                      {item.icon}
+                    </div>
+                  </div>
+
+                  <Text
+                    variant="bodySmall"
+                    className="
+                      text-center
+                      font-medium
+                      text-black
+                      line-clamp-2
+                    "
+                  >
+                    {item.name}
+                  </Text>
+                </div>
+              );
+            })}
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
           </div>
         </div>
       </Container>

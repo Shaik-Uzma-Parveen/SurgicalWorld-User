@@ -26,7 +26,10 @@ export const loginService = async (
       {
         expires: 7,
         sameSite: "Strict",
+<<<<<<< HEAD
         path: "/",
+=======
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
       }
     );
     Cookies.set(
@@ -35,6 +38,7 @@ export const loginService = async (
       {
         expires: 7,
         sameSite: "Strict",
+<<<<<<< HEAD
         path: "/",
       }
     );
@@ -67,6 +71,8 @@ export const googleLoginService = async (
         expires: 7,
         sameSite: "Strict",
         path: "/",
+=======
+>>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
       }
     );
   }
