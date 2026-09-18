@@ -2,11 +2,7 @@
 
 "use client";
 
-<<<<<<< HEAD
 import { useState, useEffect, useRef } from "react";
-=======
-import { useState } from "react";
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 import { X, User, Mail, Lock } from "lucide-react";
 import useLogin from "@/hooks/useLogin";
 import useRegister from "@/hooks/useRegister";
@@ -14,12 +10,10 @@ import { useDispatch } from "react-redux";
 import { setUser } from "@/redux/userSlice";
 import Cookies from "js-cookie";
 import useCart from "@/hooks/useCart"; // ✅ IMPORTED USECART
-<<<<<<< HEAD
+
 import { googleLoginService } from "@/services/auth.service";
 
 const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
-=======
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 
 export default function AuthModal({ isOpen, onClose, onSuccess }) {
     const dispatch = useDispatch();
@@ -37,10 +31,10 @@ const [passwordError, setPasswordError] = useState("");
 
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
-<<<<<<< HEAD
+
 const [googleError, setGoogleError] = useState("");
-=======
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
+
+
 
     const {
         register,
@@ -51,8 +45,7 @@ const [googleError, setGoogleError] = useState("");
 
     const { login, loading, error } = useLogin();
 
-<<<<<<< HEAD
-    const handleGoogleResponse = async (response) => {
+ const handleGoogleResponse = async (response) => {
         setGoogleError("");
         const googleToken = response?.credential;
 
@@ -158,9 +151,7 @@ const [googleError, setGoogleError] = useState("");
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isOpen, activeTab]);
 
-=======
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
-    if (!isOpen) return null;
+if (!isOpen) return null;
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -283,11 +274,9 @@ const [googleError, setGoogleError] = useState("");
                 {/* Tabs */}
                 <div className="flex border-b">
                     <button
-<<<<<<< HEAD
-                        onClick={() => { setGoogleError(""); setActiveTab("login"); }}
-=======
+onClick={() => { setGoogleError(""); setActiveTab("login"); }}
                         onClick={() => setActiveTab("login")}
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
+
                         className={`flex-1 py-3 text-sm font-medium transition ${activeTab === "login"
                             ? "border-b-2 border-[var(--color-text-primary)] text-[var(--color-text-primary)]"
                             : "text-gray-500"
@@ -296,11 +285,7 @@ const [googleError, setGoogleError] = useState("");
                         Login
                     </button>
                     <button
-<<<<<<< HEAD
-                        onClick={() => { setGoogleError(""); setActiveTab("signup"); }}
-=======
-                        onClick={() => setActiveTab("signup")}
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
+  onClick={() => { setGoogleError(""); setActiveTab("signup"); }}
                         className={`flex-1 py-3 text-sm font-medium transition ${activeTab === "signup"
                             ? "border-b-2 border-[var(--color-text-primary)] text-[var(--color-text-primary)]"
                             : "text-gray-500"
@@ -448,7 +433,7 @@ const [googleError, setGoogleError] = useState("");
                         </form>
                     )}
 
-<<<<<<< HEAD
+
                     {activeTab === "login" && (
                         <>
                             {/* Divider */}
@@ -469,24 +454,21 @@ const [googleError, setGoogleError] = useState("");
                             />
                         </>
                     )}
-=======
+
                     {/* Divider */}
                     <div className="my-4 flex items-center">
                         <div className="h-px flex-1 bg-gray-200" />
                         <span className="px-3 text-xs text-gray-400">OR</span>
                         <div className="h-px flex-1 bg-gray-200" />
                     </div>
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
+
 
                     {/* Footer */}
                     <p className="mt-4 text-center text-xs text-gray-500">
                         {activeTab === "login" ? "Don't have an account?" : "Already have an account?"}
                         <button
-<<<<<<< HEAD
+
                             onClick={() => { setGoogleError(""); setActiveTab(activeTab === "login" ? "signup" : "login"); }}
-=======
-                            onClick={() => setActiveTab(activeTab === "login" ? "signup" : "login")}
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
                             className="ml-1 font-medium text-[var(--color-text-primary)]"
                         >
                             {activeTab === "login" ? "Create Account" : "Login"}

@@ -1,19 +1,16 @@
 "use client";
 
-<<<<<<< HEAD
+
 import { useEffect, useRef } from "react";
-=======
-import { useRef } from "react";
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
 import Container from "@/components/ui/Container";
 import Text from "@/components/ui/Text";
 import useCategories from "@/hooks/useCategories";
 import { useRouter } from "next/navigation";
-<<<<<<< HEAD
+
 
 const AUTO_SCROLL_SPEED = 80;
 const AUTO_SCROLL_CLONES = 3;
-=======
+
 import {
   Stethoscope,
   HeartPulse,
@@ -42,12 +39,12 @@ const categoryIcons = {
   Medicines: Pill,
   Furniture: Bed,
 };
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
+
 
 export default function CategorySection() {
   const router = useRouter();
   const scrollRef = useRef(null);
-<<<<<<< HEAD
+
   const pausedRef = useRef(false);
   const lastTimeRef = useRef(null);
   const rafRef = useRef(null);
@@ -103,12 +100,10 @@ export default function CategorySection() {
     };
   }, [categories, loading, error]);
 
-  const handleCategoryClick = (item) => {
-    sessionStorage.setItem("selectedCategory", item.id);
-    router.push("/products");
-=======
-
-  const { categories, loading, error } = useCategories();
+ const handleCategoryClick = (item) => {
+  sessionStorage.setItem("selectedCategory", item.id);
+  router.push("/products");
+};
 
   const scrollCategories = (direction) => {
     if (!scrollRef.current) return;
@@ -117,7 +112,7 @@ export default function CategorySection() {
       left: direction === "left" ? -350 : 350,
       behavior: "smooth",
     });
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
+
   };
 
   if (loading) {
@@ -160,16 +155,7 @@ export default function CategorySection() {
         </div>
 
         <div className="relative">
-<<<<<<< HEAD
-          <div
-            ref={scrollRef}
-            onMouseEnter={() => {
-              pausedRef.current = true;
-            }}
-            onMouseLeave={() => {
-              pausedRef.current = false;
-            }}
-=======
+         
           {/* Left Arrow (Desktop Only) */}
           <button
             onClick={() => scrollCategories("left")}
@@ -213,8 +199,14 @@ export default function CategorySection() {
           </button>
 
           <div
-            ref={scrollRef}
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
+           ref={scrollRef}
+  onMouseEnter={() => {
+    pausedRef.current = true;
+  }}
+  onMouseLeave={() => {
+    pausedRef.current = false;
+  }}
+
             className="
               flex
               gap-4
@@ -225,7 +217,7 @@ export default function CategorySection() {
               lg:px-14
             "
           >
-<<<<<<< HEAD
+
             {Array.from({ length: AUTO_SCROLL_CLONES })
               .flatMap((_, copyIndex) =>
                 categories.map((item) => {
@@ -301,7 +293,7 @@ export default function CategorySection() {
                   );
                 })
               )}
-=======
+
             {categories.map((item) => {
               const Icon =
                 categoryIcons[item.name] ||
@@ -381,7 +373,7 @@ export default function CategorySection() {
                 </div>
               );
             })}
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
+
           </div>
         </div>
       </Container>

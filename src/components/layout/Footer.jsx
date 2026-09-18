@@ -87,11 +87,11 @@ export default function Footer() {
     variant="h4"
     className="text-white"
   >
-<<<<<<< HEAD
+
     SURGICAL WORLD
-=======
+
     Surgical World
->>>>>>> 73ef5889daba960b9da21ffc8a6306c6cd877358
+
   </Text> */}
             </div>
             <Text
