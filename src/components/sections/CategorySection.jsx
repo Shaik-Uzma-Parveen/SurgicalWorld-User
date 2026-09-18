@@ -22,8 +22,6 @@ import {
   Syringe,
   Microscope,
   Scissors,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
 
 const categoryIcons = {
@@ -105,16 +103,6 @@ export default function CategorySection() {
   router.push("/products");
 };
 
-  const scrollCategories = (direction) => {
-    if (!scrollRef.current) return;
-
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -350 : 350,
-      behavior: "smooth",
-    });
-
-  };
-
   if (loading) {
     return (
       <section className="py-12">
@@ -155,48 +143,6 @@ export default function CategorySection() {
         </div>
 
         <div className="relative">
-         
-          {/* Left Arrow (Desktop Only) */}
-          <button
-            onClick={() => scrollCategories("left")}
-            className="
-              absolute
-              left-0
-              top-1/2
-              z-10
-              hidden
-              -translate-y-1/2
-              rounded-full
-              bg-white
-              p-3
-              shadow-lg
-              hover:bg-gray-100
-              lg:flex
-            "
-          >
-            <ChevronLeft size={22} />
-          </button>
-
-          {/* Right Arrow (Desktop Only) */}
-          <button
-            onClick={() => scrollCategories("right")}
-            className="
-              absolute
-              right-0
-              top-1/2
-              z-10
-              hidden
-              -translate-y-1/2
-              rounded-full
-              bg-white
-              p-3
-              shadow-lg
-              hover:bg-gray-100
-              lg:flex
-            "
-          >
-            <ChevronRight size={22} />
-          </button>
 
           <div
            ref={scrollRef}
@@ -214,7 +160,6 @@ export default function CategorySection() {
               scroll-smooth
               pb-3
               scrollbar-hide
-              lg:px-14
             "
           >
 

@@ -32,15 +32,9 @@ import { setUser, clearUser } from "@/redux/userSlice";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-
   { href: "/about", label: "Why Us" },
   { href: "/categories", label: "Categories" },
   { href: "/contact", label: "Contact Us" },
-
-  { href: "/products", label: "Products" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-
 ];
 
 export default function Header() {
